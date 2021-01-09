@@ -3,7 +3,7 @@
   "devDependencies": {
     "babelify": "^8.0.0",
     "jest": "16.0.0",
-    "json-api-client": "^0.2.3",
+    "json-api-client": "^0.4.4",
     "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^15.6.2",
     "webpack-cli": "^1.5.3",
@@ -26,7 +26,7 @@
     "create-react-class": "^15.6.3",
     "jquery": "^3.3.1",
     "jquery-ui-dist": "^1.12.1",
-    "json-api-client": "^0.4.4",
+    "json-api-client": "^5.0.2",
     "normalize.css": "^3.0.3",
     "query-string": "^6.1.0",
     "react": "^15.6.2",

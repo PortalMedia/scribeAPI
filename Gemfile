@@ -3,8 +3,10 @@ source 'https://rubygems.org'
 ruby '2.2.10'
 
 gem 'rails', '~> 4.2.6'
-gem 'sass-rails'
-gem 'webpacker', '~> 3.5'
+# gem 'sass-rails'
+gem 'sass-rails', '~> 5.0.5'
+# gem 'webpacker', '~> 3.5'
+gem 'webpacker', '~> 4.0'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise', '3.4.0'
@@ -12,15 +14,18 @@ gem 'omniauth-facebook'
 gem "omniauth-google-oauth2"
 gem 'omniauth-zooniverse', '~> 0.0.3'
 
-gem 'mongoid', '~> 5.4.0'
-gem 'active_model_serializers'
-gem 'mongoid-serializer'
+gem 'mongoid', '~> 5.2.1'
+# gem 'active_model_serializers'
+gem 'active_model_serializers', '~>0.9.4'
+# gem 'mongoid-serializer'
+gem 'mongoid-serializer', '~>0.0.5'
 gem 'rack-cors', :require => 'rack/cors'
 gem "bson"
 gem "moped"
 
 gem 'rack-streaming-proxy', '~> 2.0.1'
-gem 'kaminari'
+# gem 'kaminari'
+gem 'kaminari', '~> 0.17.0'
 gem 'fastimage', '1.7.0'
 
 gem 'actionpack-action_caching'
@@ -52,5 +57,5 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
   gem 'factory_girl'
-  gem 'mongoid-rspec', '3.0.0'
+  # gem 'mongoid-rspec', '~> 4.0.0'
 end

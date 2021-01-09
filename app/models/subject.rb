@@ -1,4 +1,5 @@
 class Subject
+  include Kaminari::ConfigurationMethods
   include Mongoid::Document
   include Mongoid::Timestamps
   include Randomizer

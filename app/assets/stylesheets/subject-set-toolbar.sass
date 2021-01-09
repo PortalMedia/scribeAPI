@@ -1,7 +1,8 @@
 .subject-set-toolbar
   height: 100%
   width: 60px
-  +flex($shrink: 1)
+  display: flex
+  flex-shrink: 1
   margin-left: 0
   position: fixed
   top: 72px
@@ -84,7 +85,7 @@
       color: #fff
       justify-content: center
       align-content: center
-      +flex-direction(column)
+      flex-direction: column
       z-index: 1000
       box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.4)
 
