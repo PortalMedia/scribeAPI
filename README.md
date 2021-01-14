@@ -1,6 +1,18 @@
 > **Warning**
 > This project is experimental and not well supported.
 
+## Portal Notes (Temp)
+- Specified versions for gems that seem to be compatible with legacy project
+- Updated SASS to compile properly with `rails-sass` at the specified version
+- Copied in directory for a Dockerized mongodb intance. Note that an original compose file is also available with the original project, which may be useful.
+
+To run:
+- Run `bundle install`
+- In the mongodb-docker directory, run `docker-compose up` to start the mongo container
+- Follow the steps outlined in the original fork to set up the Rails project
+- Start the webpack dev server: `./bin/webpack-dev-server`
+- Run `rails s -b 0.0.0.0` on the host VM 
+
 # Scribe 
 
 [Scribe](http://scribeproject.github.io/) is a framework for crowdsourcing the transcription of text-based documents, particularly documents that are not well suited for Optical Character Recognition. It is a collaboration between [Zooniverse](https://www.zooniverse.org/) and [The New York Public Library Labs](http://labs.nypl.org/) with generous support from [The National Endowment for the Humanities (NEH), Office of Digital Humanities](http://www.neh.gov/divisions/odh).
