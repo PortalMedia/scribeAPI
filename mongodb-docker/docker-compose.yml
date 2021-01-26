@@ -1,8 +1,8 @@
 version: '3'
 services:
         mongodb:
-                # image: 'mongo:4.0-xenial'
-                image: 'bdsysops/mongodb-2.4'
+                image: 'mongo:4.0-xenial'
+                # image: 'bdsysops/mongodb-2.4'
                 container_name: 'mongodb_dev'
                 environment:
                         - MONGO_INITDB_DATABASE=loop_dev
