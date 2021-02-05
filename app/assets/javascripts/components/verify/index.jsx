@@ -104,12 +104,9 @@ export default AppContext(createReactClass({
                   }
                   buttons={<GenericButton label="Continue" href="/#/mark" />}
                 >
-                  {`\
-Currently, there are no `}
-                  {this.props.project.term("subject")}s for you to{" "}
+                  {`\ Currently, there is nothing to `}
                   {this.props.workflowName}. Try <a href="/#/mark">marking</a>
-                  {` instead!\
-`}
+                  {` instead!\ `}
                 </DraggableModal>
               );
             } else if (this.getCurrentSubject() != null) {
@@ -172,16 +169,6 @@ Currently, there are no `}
         ) : (
             undefined
           )}
-        {this.props.project.tutorial != null && this.state.showingTutorial ? (
-          // Check for workflow-specific tutorial
-          this.props.project.tutorial.workflows != null &&
-            this.props.project.tutorial.workflows[__guard__(this.getActiveWorkflow(), x => x.name)] ? (
-              <Tutorial tutorial={this.props.project.tutorial.workflows[this.getActiveWorkflow().name]} onCloseTutorial={this.hideTutorial} />
-            ) : (
-              // Otherwise just show general tutorial
-              <Tutorial tutorial={this.props.project.tutorial} onCloseTutorial={this.hideTutorial} />
-            )
-        ) : undefined}
         {this.state.helping ? (
           <HelpModal help={this.getCurrentTask().help} onDone={() => this.setState({ helping: false })} />
         ) : undefined}
