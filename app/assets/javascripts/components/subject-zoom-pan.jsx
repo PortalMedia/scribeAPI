@@ -133,6 +133,10 @@ export default class SubjectZoomPan extends React.Component {
       }, time)
   }
 
+  getMaxPan(zoom) {
+     return Math.max(0, (zoom.level - 1) / zoom.level)
+  }
+
   /**
    * Reset zoom & pan state
    */

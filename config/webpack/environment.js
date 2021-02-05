@@ -9,4 +9,9 @@ environment.plugins.prepend('Provide', new webpack.ProvidePlugin({
   jquery: 'jquery'
 }))
 
+environment.loaders.append('stylus', {
+    test: /\.styl$/,
+    use: ['style-loader', 'css-loader', 'stylus-loader']
+})
+
 module.exports = environment

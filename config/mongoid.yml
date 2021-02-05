@@ -19,6 +19,8 @@ production:
       uri: <%= ENV['MONGOLAB_URI'] %>
 
       options:
+        user: 'loop_dev'
+        password: 'loop_dev'
         # The default consistency is :eventual, which reads from
         # secondaries when possible.
         # Strong forces reads to primary.
@@ -60,12 +62,16 @@ development:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: <%= ENV['MONGO_DB'].blank? ? 'scribe_api_development' : ENV['MONGO_DB'] %>
+      database: <%= ENV['MONGO_DB'].blank? ? 'loop_dev' : ENV['MONGO_DB'] %>
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
         - localhost:27017
       options:
+        user: 'loop_dev'
+        password: 'loop_dev'
+        auth_source: admin
+        auth_mech: :scram
         # Change the default write concern. (default = { w: 1 })
         # write:
         # w: 1
@@ -117,7 +123,7 @@ development:
 test:
   clients:
     default:
-      database: api_test
+      database: loop_dev
       hosts:
         - localhost:27017
       options:
