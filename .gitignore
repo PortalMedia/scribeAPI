@@ -96,4 +96,6 @@ dump
 yarn-debug.log*
 .yarn-integrity
 
-mongo/appdata
+mongodb-docker/appdata
+
+

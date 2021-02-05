@@ -1,0 +1,19 @@
+{
+	"_id": {
+		"$oid": "601d735a332fe8a61cb5e602"
+	},
+	"email": "",
+	"encrypted_password": "",
+	"sign_in_count": 0,
+	"status": "active",
+	"role": "user",
+	"name": "Guest",
+	"guest": true,
+	"tutorial_complete": true,
+	"updated_at": {
+		"$date": "2021-02-05T16:33:30.244Z"
+	},
+	"created_at": {
+		"$date": "2021-02-05T16:33:30.227Z"
+	}
+}

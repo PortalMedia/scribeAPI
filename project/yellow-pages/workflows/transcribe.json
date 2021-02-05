@@ -1,0 +1,81 @@
+{
+  "name": "transcribe",
+  "label": "Transcribe Workflow",
+  "retire_limit": 3,
+  "generates_subjects": true,
+  "generates_subjects_for": null,
+  "generates_subjects_after": 3,
+  "generates_subjects_max": 10,
+  "generates_subjects_method": "collect-unique",
+  "first_task": "yp_business_type",
+  "tasks": {
+
+
+    "yp_business_type": {
+      "tool": "textTool",
+      "tool_config": {},
+      "instruction": "Enter the business type",
+      "examples": ["Veterinarians", "Shoes--Custom-Made", "Automobile Painters"],
+      "help": {
+        "file": "t_business_type"
+      },
+      "generates_subject_type": "yp_transcribed_business_type",
+      "next_task": "yp_business_name"
+    },
+
+    "yp_business_name": {
+      "tool": "textTool",
+      "tool_config": {},
+      "instruction": "Enter the business name",
+      "examples": ["Gabriel Sales Company", "WELLER LUMBER CO"],
+      "help": {
+        "file": "t_business_name"
+      },
+      "generates_subject_type": "yp_transcribed_business_name"
+    },
+
+    "yp_business_address": {
+      "tool": "textTool",
+      "instruction": "Enter the business address",
+      "examples": ["621 E Fountain", "16 Post Office pl", "5439 Cermak rd"],
+      "generates_subject_type": "yp_transcribed_business_address",
+      "help": {
+        "file": "t_business_address"
+      }
+    },
+
+    "yp_exchange_name": {
+      "tool": "textTool",
+      "tool_config": {},
+      "instruction": "Enter the telephone exchange name",
+      "examples": ["CRA wfrd", "MELrse", "LAWndl"],
+      "generates_subject_type": "yp_transcribed_exchange_name",
+      "help": {
+        "file": "t_transcribed_exchange_name"
+      }
+    },
+
+    "yp_phone_number": {
+      "tool": "textTool",
+      "tool_config": {},
+      "instruction": "Enter the phone number",
+      "examples": ["4492", "2-4195"],
+      "generates_subject_type": "yp_transcribed_phone_number",
+      "help": {
+        "file": "t_transcribed_phone_number"
+      }
+    },
+
+    "yp_other": {
+      "tool": "textTool",
+      "tool_config": {},
+      "instruction": "Enter any other information",
+      "examples": ["Uptown Store", "If no answer call", "Large & Small Animals"],
+      "help": {
+        "file": "transcribed_other"
+      },
+      "generates_subject_type": "yp_transcribed_other",
+      "next_task": null
+    }
+  }
+}

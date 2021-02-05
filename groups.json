@@ -1,0 +1,27 @@
+{
+	"_id": {
+		"$oid": "601d72d4332fe8a58ba21f28"
+	},
+	"stats": {},
+	"key": "only_one_group",
+	"project_id": {
+		"$oid": "601d72d4332fe8a58ba21f0d"
+	},
+	"updated_at": {
+		"$date": "2021-02-05T16:31:16.887Z"
+	},
+	"created_at": {
+		"$date": "2021-02-05T16:31:16.877Z"
+	},
+	"cover_image_url": "http://images.nypl.org/index.php?id=5265257\u0026t=w",
+	"description": "Complete set of records spanning 1871-19..",
+	"external_url": "http://digitalcollections.nypl.org/collections/emigrant-savings-bank-records",
+	"meta_data": {
+		"key": "only_one_group",
+		"description": "Complete set of records spanning 1871-19..",
+		"cover_image_url": "http://images.nypl.org/index.php?id=5265257\u0026t=w",
+		"external_url": "http://digitalcollections.nypl.org/collections/emigrant-savings-bank-records",
+		"retire_count": "2"
+	},
+	"name": "Emigrant Savings Bank Bond and Mortgage Record Books"
+}

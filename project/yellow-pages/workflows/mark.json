@@ -1,0 +1,74 @@
+{
+  "name":"mark",
+  "label":"Mark Workflow",
+  "subject_fetch_limit":"10",
+  "generates_subjects": true,
+  "generates_subjects_for": "transcribe",
+
+  "first_task":"mark_segments",
+
+  "tasks": {
+    "mark_segments": {
+      "tool": "pickOneMarkOne",
+      "instruction": "Pick the type of segment, advertisement, business block, or informational, then drawa box around the segment.",
+      "generates_subjects": true,
+      "help": {
+        "file": "mark_segments"
+      },
+      "tool_config" : {
+        "displays_transcribe_button": false,
+        "options": [
+          {"type": "rectangleTool", "label": "Advertisement", "color": "red", "generates_subject_type": "yp_advertisement", "help": {"file": "m_advertisement"}},
+          {"type": "rectangleTool", "label": "Business Listing Block", "color": "blue", "generates_subject_type": "yp_business_block", "help":  {"file": "m_business_block"}},
+          {"type": "rectangleTool", "label": "Informational", "color": "darkorange", "generates_subject_type": "yp_informational", "help": {"file": "m_informational"}}
+        ]
+      },
+      "next_task": "yp_business_block"
+    },
+    "yp_business_block": {
+      "tool": "pickOneMarkOne",
+      "instruction": "Mark all of the parts of a business listing block: the business type and each business listing. Mark expanded business listings as Informational Business Listing.",
+      "generates_subjects": true,
+      "help": {
+        "file": "mark_business_blocks"
+      },
+      "tool_config" : {
+        "displays_transcribe_button": false,
+        "options": [
+          {"type": "rectangleTool", "label": "Business Type", "color": "red", "generates_subject_type": "yp_business_type", "help": {"file": "m_business_type"}},
+          {"type": "rectangleTool", "label": "Business Listing", "color": "blue", "generates_subject_type": "yp_business_listing", "help":  {"file": "m_business_listing"}}
+        ]
+      },
+      "next_task": "yp_business_listing"
+    },
+    "completion_assessment_task": {
+      "tool_config": {
+        "displays_transcribe_button": false
+      }
+    },
+    "yp_business_listing": {
+      "tool": "pickOneMarkOne",
+      "instruction": "Mark all of the parts of a business listing: business name, address, telephone exchange name, phone number, and any other information.",
+      "generates_subjects": true,
+      "help": {
+        "file": "mark_business_listings"
+      },
+      "tool_config" : {
+        "displays_transcribe_button": false,
+        "options": [
+          {"type": "rectangleTool", "label": "Business Name", "color": "red", "generates_subject_type": "yp_business_name", "help": {"file": "m_business_name"}},
+          {"type": "rectangleTool", "label": "Business Address", "color": "blue", "generates_subject_type": "yp_business_address", "help":  {"file": "m_business_address"}},
+          {"type": "rectangleTool", "label": "Exchange Name", "color": "darkorange", "generates_subject_type": "yp_exchange_name", "help": {"file": "m_exchange_name"}},
+          {"type": "rectangleTool", "label": "Phone Number", "color": "darkorange", "generates_subject_type": "yp_phone_number", "help": {"file": "m_phone_number"}},
+          {"type": "rectangleTool", "label": "Other Information", "color": "darkorange", "generates_subject_type": "yp_other", "help": {"file": "m_other"}}
+        ]
+      },
+      "next_task": null
+    },
+    "completion_assessment_task": {
+      "tool_config": {
+        "displays_transcribe_button": false
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+	"_id": {
+		"$oid": "601d72d4332fe8a58ba21f0e"
+	},
+	"retire_limit": 3,
+	"subject_fetch_limit": 10,
+	"generates_subjects": true,
+	"generates_subjects_after": 0,
+	"generates_subjects_for": "transcribe",
+	"generates_subjects_method": "one-per-classification",
+	"generates_subjects_agreement": 0.75,
+	"subjects_classifiable_by_creator": true,
+	"active_subjects": 0,
+	"order": 0,
+	"name": "mark",
+	"project_id": {
+		"$oid": "601d72d4332fe8a58ba21f0d"
+	},
+	"first_task": "mark_primary",
+	"label": "Mark Workflow",
+	"tasks": [
+		{
+			"_id": {
+				"$oid": "601d72d4332fe8a58ba21f0f"
+			},
+			"instruction": "",
+			"tool": "pickOneMarkOne",
+			"help": {
+				"file": "mark_primary",
+				"title": "Drawing boxes",
+				"body": "Draw a box around each of the fields.\n\u003c!--per 10/26 we are planning to suppress this button--\u003e\n"
+			},
+			"tool_config": {
+				"displays_transcribe_button": false,
+				"options": [
+					{
+						"type": "rectangleTool",
+						"label": "Record Date",
+						"color": "red",
+						"generates_subject_type": "em_record_date",
+						"help": {
+							"file": "m_record_date",
+							"title": "Record Date",
+							"body": "\u003cp\u003eSometimes record dates are hand-written in the form's left-hand margin. Be careful not to confuse the date of valuation with the record date.\u003c/p\u003e\n\u003cdiv id=\"accordion-help-modal\"\u003e\n  \u003ch3\u003eSample Image One\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_date_1.png\" alt=\"record_date_image_1\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Two\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_date_2.png\" alt=\"record_date_image_2\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Three\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_date_3.png\" alt=\"record_date_image_3\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Four\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_date_4.png\" alt=\"record_date_image_4\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eNaming Variants\u003c/h3\u003e\n  \u003cdiv\u003e\n    \u003cul\u003e\n      \u003cli\u003eDate of Approval\u003c/li\u003e\n      \u003cli\u003eDated\u003c/li\u003e\n      \u003cli\u003eRecord Date\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+						}
+					},
+					{
+						"type": "rectangleTool",
+						"label": "Record Number",
+						"color": "blue",
+						"generates_subject_type": "em_record_number",
+						"help": {
+							"file": "m_record_number",
+							"title": "Record Number",
+							"body": "\u003cp\u003eThe record number can generally be found in the upper right-hand corner of the record. Don't worry if you can't find this field on the page; many mortgages do not have a record number.\u003c/p\u003e\n\u003cdiv id=\"accordion-help-modal\"\u003e\n  \u003ch3\u003eSample Image One\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_number_1.png\" alt=\"record_number_image_1\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Two\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_number_2.png\" alt=\"record_number_image_2\"\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+						}
+					},
+					{
+						"type": "rectangleTool",
+						"label": "Mortgager Name",
+						"color": "darkorange",
+						"generates_subject_type": "em_record_mortgager",
+						"help": {
+							"file": "m_record_mortgager",
+							"title": "Mortgager Name",
+							"body": "\u003cp\u003eThe mortgager tends to be a single person or organization's name. If multiple names are provided, draw one box around all of them.\u003c/p\u003e\n\u003cdiv id=\"accordion-help-modal\"\u003e\n  \u003ch3\u003eSample Image One\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_mortgager_1.png\" alt=\"record_mortgager_image_1\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Two\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_mortgager_2.png\" alt=\"record_mortgager_image_2\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Three\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_mortgager_3.png\" alt=\"record_mortgager_image_3\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eNaming Variants\u003c/h3\u003e\n  \u003cdiv\u003e\n    \u003cul\u003e\n      \u003cli\u003eMortgager\u003c/li\u003e\n      \u003cli\u003eApplicant\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+						}
+					},
+					{
+						"type": "rectangleTool",
+						"label": "Street Address",
+						"color": "magenta",
+						"generates_subject_type": "em_record_street_address",
+						"help": {
+							"file": "m_record_street_address",
+							"title": "Street Address",
+							"body": "\u003cp\u003ePut a box around the street address of the mortgage's property.\u003c/p\u003e\n\u003cdiv id=\"accordion-help-modal\"\u003e\n  \u003ch3\u003eSample Image One\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_address_1.png\" alt=\"record_street_address_image_1\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Two\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_address_2.png\" alt=\"record_street_address_image_2\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Three\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_address_3.png\" alt=\"record_street_address_image_3\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Four\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_address_4.png\" alt=\"record_street_address_image_4\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eNaming Variants\u003c/h3\u003e\n  \u003cdiv\u003e\n    \u003cul\u003e\n      \u003cli\u003eNo. of Street or Avenue\u003c/li\u003e\n      \u003cli\u003eHouse Number\u003c/li\u003e\n      \u003cli\u003ePremises\u003c/li\u003e\n      \u003cli\u003eLocation\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+						}
+					},
+					{
+						"type": "rectangleTool",
+						"label": "Amount Loaned",
+						"color": "teal",
+						"generates_subject_type": "em_record_amount_loaned",
+						"help": {
+							"file": "m_record_amount_loaned",
+							"title": "Amount Loaned",
+							"body": "\u003cp\u003eThe amount loaned is typically found at or near the bottom of the record.\u003c/p\u003e\n\u003cdiv id=\"accordion-help-modal\"\u003e\n  \u003ch3\u003eSample Image One\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_loan_1.png\" alt=\"record_loan_1\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Two\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_loan_2.png\" alt=\"record_loan_2\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Three\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_loan_3.png\" alt=\"record_loan_3\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Four\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_loan_4.png\" alt=\"record_loan_4\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eNaming Variants\u003c/h3\u003e\n  \u003cdiv\u003e\n    \u003cul\u003e\n      \u003cli\u003eAmount Loaned\u003c/li\u003e\n      \u003cli\u003eApproved by the Finance Committee for $_____\u003c/li\u003e\n      \u003cli\u003eApproved by the Executive Committee for $_____\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+						}
+					},
+					{
+						"type": "rectangleTool",
+						"label": "Valuation",
+						"color": "sienna",
+						"generates_subject_type": "em_record_valuation",
+						"help": {
+							"file": "m_record_valuation",
+							"title": "Valuation  ",
+							"body": "\u003cp\u003eSome records include valuations comprised of an assessment date and dollar values. Valuations can be of the land, the building, the total, or a combination of the three. Draw one box around all the valuations. Be sure to include the valuation date, one appears.\u003c/p\u003e\n\u003cdiv id=\"accordion-help-modal\"\u003e\n  \u003ch3\u003eSample Image One\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_value_1.png\" alt=\"record_value_image_1\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Two\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_value_2.png\" alt=\"record_value_image_2\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Three\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_value_3.png\" alt=\"record_value_image_3\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Four\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_value_4.png\" alt=\"record_value_image_4\"\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+						}
+					},
+					{
+						"type": "rectangleTool",
+						"label": "Dimension \u0026 Description",
+						"color": "purple",
+						"generates_subject_type": "em_record_survey",
+						"help": {
+							"file": "m_record_survey",
+							"title": "Dimensions \u0026 Description",
+							"body": "\u003cp\u003eSome records include dimensions and/or descriptions of the mortgage's land and building. Include both the dimensions and the description when you draw a box. If they appear, short descriptions, number of stories, and building material should all be marked. There may be several marks per record for this page.\u003c/p\u003e\n\u003cdiv id=\"accordion-help-modal\"\u003e\n  \u003ch3\u003eSample Image One\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_survey_1.png\" alt=\"record_survey_1\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Two\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_survey_2.png\" alt=\"record_survey_2\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Three\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_survey_3.png\" alt=\"record_survey_3\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eSample Image Four\u003c/h3\u003e\n  \u003cdiv class=\"modal-field-guide\" \u003e\n    \u003cimg src=\"/images/m_survey_4.png\" alt=\"record_survey_4\"\u003e\n  \u003c/div\u003e\n  \u003ch3\u003eNaming Variants\u003c/h3\u003e\n  \u003cdiv\u003e\n    \u003cul\u003e\n      \u003cli\u003eDescription of Building and Dimensions of Ground\u003c/li\u003e\n      \u003cli\u003eSize of Building ______ x ______ feet and Size of Ground ______ x ______ feet\u003c/li\u003e\n    \u003c/ul\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+						}
+					}
+				]
+			},
+			"next_task": null,
+			"key": "mark_primary"
+		},
+		{
+			"_id": {
+				"$oid": "601d72d4332fe8a58ba21f10"
+			},
+			"instruction": "",
+			"tool_config": {
+				"displays_transcribe_button": false
+			},
+			"key": "completion_assessment_task"
+		}
+	]
+}

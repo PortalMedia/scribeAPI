@@ -1,0 +1,224 @@
+{
+	"_id": {
+		"$oid": "601d72d4332fe8a58ba21f0d"
+	},
+	"author": "NYPL/Zooniverse",
+	"title": "Emigrant City",
+	"short_title": "Emigrant",
+	"team": [
+		{
+			"name": "Brian Foo",
+			"role": "Code DJ",
+			"organization": "NYPL"
+		},
+		{
+			"name": "Paul Beaudoin",
+			"role": "shoehorn",
+			"organization": "NYPL"
+		}
+	],
+	"summary": "Join us in transcribing 19th century real estate records from the Emigrant Savings Bank.",
+	"description": "Scribe is particularly geared toward digital humanities, library, and citizen science projects seeking to extract highly structured, normalizable data from a set of digitized materials (e.g. historical manuscripts, account ledgers, or maritime logbooks) in order to enable further analysis, metadata enrichment, and discovery. Scribe is not a crowdsourcing project in a box, but it establishes the foundation for a developer to configure and launch a project far more easily than if starting from scratch.",
+	"keywords": "transcription, digital humanities, citizen science, crowdsourcing, metadata",
+	"home_page_content": "\u003cdiv class=\"logo\"\u003e[The New York Public Library](http://www.nypl.org/) presents\u003c/div\u003e\r\n\r\nJoin us in transcribing 19th and early 20th century real estate records from the Emigrant Savings Bank. These unique documents reveal the lives and dreams of immigrants who helped create modern New York. Help unlock a vital piece of history!  \r\n\r\n\u003ca class=\"major-button\" href=\"/#/intro\"\u003eGet Started!\u003c/a\u003e\r\n\r\n----\r\n",
+	"organizations": [
+		{
+			"title": "NYPL",
+			"description": "Books, mostly.",
+			"url": "http://nypl.org",
+			"logo": "http://cdn-prod.www.aws.nypl.org/sites/all/themes/nypl_new/images/main-logo.png"
+		}
+	],
+	"scientists": [],
+	"developers": [],
+	"pages": [
+		{
+			"key": "about",
+			"name": "About",
+			"content": "## Emigrant City\r\n\r\n### Contact information\r\nQuestions? Comments? Contact us at emigrantcity@nypl.org or reach out to us on [Twitter](https://twitter.com/nypl_labs).\r\n\r\n### About Emigrant Bank\r\n\r\n[Emigrant Bank](https://www.emigrant.com/Information/aboutus/AboutUs.jsp) was founded in 1850 by members of the Irish Emigrant society to serve the needs of the Irish immigrant community in New York. In its early history, the bank grew to become the seventh largest bank in the nation, and it made major investments in the growth of New York City by underwriting loans for such important initiatives as the construction of St. Patrickís Cathedral and a public works project that ultimately became Central Park. In 1995, Emigrant Bank generously donated to The New York Public Library [extensive archival records](http://archives.nypl.org/mss/925) that are valuable historical and genealogical resources documenting the lives of immigrant families. The Library microfilmed the entire collection and compiled a [detailed finding aid](http://archives.nypl.org/uploads/documents/documentation/collection_1837_mss925-extra.pdf) that outlines the full scope of the Emigrant Savings Bank records. This heavily trafficked collection is housed in the [Manuscripts and Archives Division](http://www.nypl.org/locations/divisions/manuscripts-division). Though, users primarily encounter it through the [Irma and Paul Milstein Division of United States History, Local History and Genealogy](http://www.nypl.org/locations/divisions/milstein).\r\n\r\n### Digitization and Public Transcription: Bringing New Materials to Light\r\n\r\nWhile a portion of the Bank's records have been digitized and poured over by generations of genealogists, the real estate materials appear to be largely unknown and underutilized. These include, most notably, mortgage and bond records: loans taken out (we suspect mostly by relatively new immigrants) to buy properties and to mortgage existing real estate (an essential step in moving up through New York's economic strata).\r\n\r\nThe goal of the _Emigrant City_ transcription initiative is to produce structured, building-level records for approximately 6,400 digitized mortgages. Building this keyword-searchable index of names and mortgage details should be of tremendous use to genealogists and will provide an intriguing historical data set for digital humanists and researchers. Additionally, because these property records include detailed geographic information, they will contribute to spatial data aggregation efforts around the Library's new historical mapping platform, the [NYC Space/Time Directory](http://spacetime.nypl.org/). We are encouraging general access to the collection by making high resolution images of these materials available via the [NYPL Digital Collections](http://digitalcollections.nypl.org/collections/emigrant-savings-bank-records#/?tab=about) website.\r\n\r\nThis is not the first time the collection has garnered attention from crowdsourcing efforts. An Ancestry.com project has successfully digitized and indexed the collection's Index Book, Test Books, Deposit-Account Ledger, and Transfer, Signature, and Test Books. The Library's project will contribute significantly to the existing accessibility efforts supporting the use of this collection and enable further scholarship and genealogical investigations into the wealth of information contained within.\r\n\r\n### How Transcription Works\r\n\r\nMany transcription projects deal with deciphering and typing free-flowing text from digitized pages (say, from letters or diaries). This project has a different focus. The goal here is to produce a _structured_ data set extracted from historical records that are themselves highly structured. This involves identifying key fields on the page and then transcribing the text from those fields. For complex, age-worn documents written in 19th century script, this is a tall order. So we've devised a division of labor.\r\n\r\nIn _Emigrant City_, transcription is broken into three free-standing tasks: marking, transcribing, and verifying. These tasks follow a sequence of work, but they can be performed independently of one another. One person may prefer the **Mark** task: identifying fields on the page and drawing boxes around them. This work provides a structure for the document that facilitates transcription of marked fields in the **Transcribe** task. This task too can be done in isolation, benefiting from the clearly placed data entry fields provided by previous volunteers in the marking stage.\r\n\r\nLastly, there is the **Verify** task. This one is all about ensuring the quality of the work done by others in the mark and transcribe stages. To ensure quality output, every marked field will be transcribed by multiple volunteers. Our software runs an algorithm that looks for agreement among the transcriptions. If a field has been transcribed consistently by several users, it has reached \"consensus\" and is added to the final data set. If there are conflicting entries, those are queued up for the verification task, in which users can vote on the most accurate transcription and, if needed, add their own.\r\n\r\nView the [Project Intro](http://emigrantcity.nypl.org/#/intro) for an illustrated guide to the **Emigrant City** task flow.\r\n\r\n\r\n### About the Software\r\n_Emigrant City_ is one of the first projects to be built on an open-source framework called [_Scribe_](http://scribeproject.github.io/) built by NYPL Labs and Zooniverse with generous support National Endowment for the Humanities. Scribe is modeled on the idea, described above, of distributed task flows and multi-user consensus, and is geared toward transcription projects that aim to produce structured data sets. It is designed to be highly configurable and able to handle a wide range of document types with varying structures.\r\n\r\n### Credits\r\n\r\n\r\n#### [NYPL Labs](http://www.nypl.org/collections/labs)\r\n\r\n* **Willa Armstrong**: Digital Projects Librarian (Product Manager)\r\n\r\n* **Paul Beaudoin**: Applications Developer (Architect/Lead Developer)\r\n\r\n* **Brian Foo**: Applications Developer (Designer/Developer)\r\n\r\n* **Mauricio Giraldo**: Interaction Lead/Senior Developer (Project Advisor)\r\n\r\n* **Josh Hadro**: Deputy Director of NYPL Labs (Digital Assets Workflow)\r\n\r\n* **Shana Kimball**: Manager of Public Programs \u0026amp; Outreach (Project Communications)\r\n\r\n* **Ben Vershbow**: Director of NYPL Labs (Project Director)\r\n\r\n\r\n#### [Irma and Paul Milstein Division of United States History, Local History and Genealogy](http://www.nypl.org/locations/divisions/milstein)\r\n\r\n* **Megan Margino** Librarian\r\n\r\n* **Carmen Nigro**: Librarian\r\n\r\n* **Andy McCarthy**: Librarian\r\n\r\n* **Philip Sutton**: Librarian\r\n\r\n\r\n#### Project Advisors\r\n\r\n* **Greg Cram**: Associate Director, Copyright \u0026amp; Information Policy, NYPL\r\n\r\n* **Matt Knutzen**: Director of the Humanities and Social Sciences Research Divisions within the Stephen A. Schwarzman Building, NYPL\r\n\r\n* **Thomas Lannon**: Assistant Curator, Manuscripts and Archives Division, NYPL\r\n\r\n* **Maira Liriano**: Associate Chief Librarian, General Research \u0026amp; Reference, Schomburg Center, NYPL\r\n\r\n\r\n#### [Zooniverse](http://zooniverse.org)\r\n\r\n* **Lucy Fortson**: PI of Zooniverse@UMN\r\n\r\n* **Sascha T. Ishikawa**: Scribe Developer (Adler Planetarium)\r\n\r\n* **Andrea Simenstad**: Scribe Developer (University of Minnesota)\r\n\r\n\r\n#### Special Thanks\r\n\r\n* **Cathy Michelsen, Susan R. Miller, McKelden Smith**: New York Genealogical and Biographical Society\r\n\r\n* **Tony Marx**: President \u0026amp; CEO, NYPL\r\n\r\n* **Mary Lee Kennedy**: Chief Library Officer, NYPL\r\n\r\n* **Kristin McDonough**: Acting Andrew W. Mellon Director, NYPL\r\n\r\n* **Carrie Welch**: Chief External Relations Officer, NYPL\r\n\r\n* **Michele Mayes**: Vice President/General Counsel, NYPL\r\n\r\n* **Frank Migliorelli**: Director of Digital Experience, NYPL\r\n\r\n* **Courtney McGee**: Content Strategist, NYPL\r\n\r\n* **Jane Aboyoun**: Chief Technology Officer, NYPL\r\n\r\n* **Nora Lyons**: Press Representative, NYPL\r\n\r\n* **Robert Kenselaar**: Assistant Director, Campaign Projects, NYPL\r\n\r\n\r\n#### Emeriti ♥\r\n\r\n* **David Riordan**\r\n\r\n* **Stuart Lynn**\r\n",
+			"updated_at": {
+				"$date": "2021-02-05T16:31:16.759Z"
+			},
+			"group_browser": ""
+		},
+		{
+			"key": "data",
+			"name": "Data",
+			"content": "## Data exports\n\nWith help from volunteers like yourself, we are extracting structured, building-level information from about 6,400 mortgages contained in the Emigrant Savings Bank Records at The New York Public Library. Of course, the ultimate goal is to make this data publicly available. Having a keyword-searchable and structured index of names and mortgage details will of great use to genealogists, historians, digital humanities researchers, and others interested in exploring historical data sources.\n\nAfter enough transcriptions are made, our team will determine the best way to get the data to you in an easy and accessible way. In the meantime, feel free to explore the collection assets themselves on the Library's [Digital Collections](http://digitalcollections.nypl.org/collections/emigrant-savings-bank-records) website. In this project, we're working with the subset of these digitized materials, the volumes containing Mortgage and Bond records. The volumes appearing in Emigrant City are:\n* [Bond and Mortgage Record Book 1 (1 to 1,555)](http://digitalcollections.nypl.org/items/df712aa0-00b1-0133-fbd7-58d385a7bbd0)\n* [Bond and Mortgage Record Book 2 (1,556 to 2, 721)](http://digitalcollections.nypl.org/items/c0c38370-015a-0133-065e-58d385a7bbd0)\n* [Bond and Mortgage Record Book 3 (2,722 to 3,699)](http://digitalcollections.nypl.org/items/5bb969d0-0241-0133-f196-58d385a7b928)\n* [Bond and Mortgage Record Book 4 (3,700 to 4,499)](http://digitalcollections.nypl.org/items/109c0900-02e7-0133-03cf-58d385a7bbd0)\n* [Bond and Mortgage Record Book 5 (4,500 to 5,499)](http://digitalcollections.nypl.org/items/e53b4fe0-02fc-0133-0e0d-58d385a7bbd0)\n* [Bond and Mortgage Record Book 6 (5,500 to 6,403)](http://digitalcollections.nypl.org/items/20aa00a0-0311-0133-9d30-58d385a7bbd0)\n* [Real Estate Loans No. 9](http://digitalcollections.nypl.org/items/6cf0ed60-23ef-0133-6b54-58d385a7b928)\n* [Real Estate Loans No. 10](http://digitalcollections.nypl.org/items/59b0a100-23fd-0133-b24f-58d385a7bbd0)\n* [Real Estate Loans No. 11](http://digitalcollections.nypl.org/items/cf0c3ee0-24bd-0133-5e2d-58d385a7b928)\n* [Real Estate Loans No. 13](http://digitalcollections.nypl.org/items/3edf3050-24cd-0133-e6df-58d385a7b928)\n\n\nYou may also be interested to explore how we’ve been experimenting with opening up data from other crowdsourcing projects:\n* [What's on the Menu?](http://menus.nypl.org/data)\n* [Building Inspector](http://buildinginspector.nypl.org/data)\n",
+			"updated_at": {
+				"$date": "2021-02-05T16:31:16.759Z"
+			},
+			"group_browser": ""
+		},
+		{
+			"key": "intro",
+			"name": "Intro",
+			"content": "## A Brief Introduction to Emigrant City\n\n### Our Goal\n\nTo extract structured data from over 6,000 handwritten mortgage and bond ledgers from the Emigrant Savings Bank records.\n\nTo divide the labor -- and to help ensure accuracy -- we've broken the work into 3 free-standing tasks. These tasks follow a sequence, but they can be performed independently (feel free to focus on the one you enjoy best).\n\n### Task 1: Mark\n\nHere you'll be identifying various pieces of information on the page. You won't be typing, just drawing boxes. This helps plot a route for the transcribers in Task 2. You may see existing marks left by other users. Just pick up where they left off.\n\n\u003cdiv class=\"video-wrapper\"\u003e\n  \u003cvideo width=\"680\" height=\"212\" loop autoplay src=\"/images/mark_task.mp4\"\u003e\u003c/video\u003e\n\u003c/div\u003e\n\n### Task 2: Transcribe\n\nHere you'll type out the words and numbers inside the fields marked by your fellow volunteers. Heads up: there may be some tricky handwriting to decipher! But don't worry, we'll get these transcribed multiple times to ensure accuracy, so give it your best shot and move on.\n\n\u003cdiv class=\"video-wrapper\"\u003e\n  \u003cvideo width=\"680\" height=\"378\" loop autoplay src=\"/images/transcribe_task.mp4\"\u003e\u003c/video\u003e\n\u003c/div\u003e\n\n### Task 3: Verify\n\nEvery document will be transcribed several times by multiple volunteers, and our software looks for agreement among them. If a field has been transcribed consistently and independently three times, it has reached \"consensus\" and is added to the final data set. If there are conflicting entries, those are queued up in the Verify task, where you can vote on the most accurate transcription, or, if needed, add your own.\n\n\u003cdiv class=\"video-wrapper\"\u003e\n  \u003cvideo width=\"680\" height=\"502\" loop autoplay src=\"/images/verify_task.mp4\"\u003e\u003c/video\u003e\n\u003c/div\u003e\n\n### Ready?\n\nYou may find you prefer one task over another, so try them all! All tasks are essential steps in the greater effort to unlock the history of land ownership in 19th century NYC!\n\n\u003cdiv class=\"columns\"\u003e\n  \u003cul\u003e\n    \u003cli\u003e\u003ca class=\"major-button\" href=\"/#/mark\"\u003eMark\u003c/a\u003e Locate key information on the documents (e.g. dates, mortgager name). No typing, just drawing boxes.\u003c/li\u003e\n    \u003cli\u003e\u003ca class=\"major-button\" href=\"/#/transcribe\"\u003eTranscribe\u003c/a\u003e Type out the fields marked by fellow volunteers. Modest deciphering of old handwriting required!\u003c/li\u003e\n    \u003cli\u003e\u003ca class=\"major-button\" href=\"/#/verify\"\u003eVerify\u003c/a\u003e Sometimes transcribers disagree. Help arbitrate and ensure that the highest quality data is produced.\u003c/li\u003e\n  \u003c/ul\u003e\n\u003c/div\u003e\n",
+			"updated_at": {
+				"$date": "2021-02-05T16:31:16.759Z"
+			},
+			"group_browser": ""
+		}
+	],
+	"menus": {
+		"main": [
+			{
+				"label": "Intro",
+				"page": "intro"
+			},
+			{
+				"label": "Data",
+				"page": "data"
+			},
+			{
+				"label": "About",
+				"page": "about"
+			}
+		],
+		"footer": []
+	},
+	"partials": {
+		"footer": "\u003cdiv class=\"scribe-footer-credits emigrants-footer-credits\"\u003e\n  \u003cdiv\u003e\n    \u003cp\u003eEmigrant City is a collaboration between\n      \u003ca href=\"http://www.nypl.org/collections/labs\"\u003eNew York Public Library Labs\u003c/a\u003e\n      and \u003ca href=\"http://www.nypl.org/locations/divisions/milstein\"\u003eThe Irma and Paul Milstein Division of United States History, Local History and Genealogy\u003c/a\u003e\n      with generous support from:\u003c/p\u003e\n    \u003cp\u003e\u003ca href=\"http://www.neh.gov/\"\u003e\u003cimg src=\"/assets/neh_logo.png\" alt=\"National Endowment for the Humanities\" title=\"National Endowment for the Humanities\" /\u003e\u003c/a\u003e\u003c/p\u003e\n    \u003cp\u003e\u0026copy; The New York Public Library, Astor, Lenox, and Tilden Foundation 2013-2015\u003c/p\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n\u003cdiv class=\"emigrants-footer-links\"\u003e\n  \u003cdiv\u003e\n    \u003ca href=\"http://www.nypl.org/help/about-nypl/legal-notices/privacy-policy\"\u003ePrivacy Policy\u003c/a\u003e\n    \u003ca href=\"http://www.nypl.org/help/about-nypl/legal-notices/rules-and-regulations\"\u003eRules and Regulations\u003c/a\u003e\n    \u003ca href=\"http://www.nypl.org/policy-patron-generated-web-content\"\u003ePolicy on Patron-Generated Web Content\u003c/a\u003e\n    \u003ca href=\"http://www.nypl.org/help/about-nypl/legal-notices/website-terms-and-conditions\"\u003eTerms and Conditions\u003c/a\u003e\n  \u003c/div\u003e\n\u003c/div\u003e\n"
+	},
+	"terms_map": {
+		"group": "collection",
+		"subject set": "page",
+		"subject": "page",
+		"mark": "region"
+	},
+	"status": "active",
+	"stats": {},
+	"key": "emigrant",
+	"show_labels": false,
+	"updated_at": {
+		"$date": "2021-02-05T16:31:32.388Z"
+	},
+	"created_at": {
+		"$date": "2021-02-05T16:31:16.744Z"
+	},
+	"admin_email": "paulbeaudoin@nypl.org",
+	"analytics": {
+		"google_analytics_client_id": "UA-69673163-1"
+	},
+	"background": "/images/background.jpg",
+	"favicon": "/images/favicon.ico",
+	"forum": {
+		"type": "discourse",
+		"base_url": "http://forum.emigrantcity.nypl.org"
+	},
+	"logo": "/images/logo.png",
+	"privacy_policy": "http://www.nypl.org/help/about-nypl/legal-notices/privacy-policy",
+	"team_emails": [
+		"brianfoo@nypl.org",
+		"willaarmstrong@nypl.org",
+		"mattknutzen@nypl.org",
+		"shanakimball@nypl.org",
+		"benjaminvershbow@nypl.org"
+	],
+	"tutorial": {
+		"name": "Tutorial",
+		"first_task": "learn_marking",
+		"tasks": {
+			"learn_marking": {
+				"next_task": "learn_transcribing",
+				"help": {
+					"title": "Hi!",
+					"file": "learn_marking",
+					"body": "Your task is to identify fields in a series of bank records. You'll be working with digitized pages from the Bank's record books. Typically, each page has two pages. Sometimes, one or both of the records are obscured by another image or an insert on the page. If there's an issue preventing you from reading the records or if there is no information recorded on the page, select the \"Bad Page\" button in the right hand pane.\n\nUse the menu on the right to select a field (e.g. \"Record Date\"). Then, use your mouse to draw a box on the image around each place that the field appears. As an aid, the fields are color coded. All the boxes for that field will appear in the same color. For additional, field specific guidance select the help buttons next to each field label.\n\nYou may see existing rectangles on the page. If this is the case, someone has already marked the field and there's no need to mark an area twice.\n\nYou can manipulate the digitized pages with tools on the left hand side of the screen. Here you'll find the zoom tool and a mark toggle. \n\nThe marks created in this task identify the fields to be transcribed in the next task phase.\n\n\u003c!--add screenshot of help?--\u003e\n"
+				}
+			},
+			"learn_transcribing": {
+				"next_task": "learn_transcribing",
+				"help": {
+					"title": "Transcribe",
+					"file": "learn_transcribing",
+					"body": "Transcribe the text exactly as you see it. For additional help and sample transcriptions, each transcription prompt has an \"Need some help\" button providing field specific context. \n\nIf the text is hard to read, transcribe as best you can. These transcriptions will be sorted through in the Verify stage.\n"
+				}
+			},
+			"learn_verifying": {
+				"next_task": null,
+				"help": {
+					"title": "Verify",
+					"file": "learn_verifying",
+					"body": "In this task, you'll perform quality control on the transcriptions. Select the best transcription from those provided. If none appear correct, you may choose to enter your own.\n\nOnce a consensus has been achieved, we'll accept the transcription as accurate and add the value to the index.\n"
+				}
+			}
+		},
+		"workflows": {
+			"mark": {
+				"name": "Mark Tutorial",
+				"first_task": "learn_marking",
+				"tasks": {
+					"learn_marking": {
+						"next_task": "tutorial_mark_2",
+						"help": {
+							"title": "Task",
+							"file": "tutorial_mark_1",
+							"body": "Your task is to identify specific pieces of information in a series of digitized bank records. Sometimes the record, or a portion of it, is obscured by an image or note pasted on the page. \n\nIf the entire record is obscured or if the page is blank, select the \"Bad Page\" button in the right hand pane and hit the next button to move to the next record.\n"
+						}
+					},
+					"tutorial_mark_2": {
+						"next_task": "tutorial_mark_3",
+						"help": {
+							"title": "Fields",
+							"file": "tutorial_mark_2",
+							"body": "Use the menu on the right to select a field (e.g. \"Record Number\"). Then, use your mouse to draw a box on the image around each place that the field appears. As an aid, the fields and their corresponding marks are color coded.\n\n\u003cdiv class=\"video-wrapper\"\u003e\n  \u003cvideo width=\"445\" height=\"113.18\" loop autoplay src=\"/images/mark_task2.mp4\"\u003e\u003c/video\u003e\n\u003c/div\u003e\n\nFor additional, field specific guidance select the question marks next to each field label.\n"
+						}
+					},
+					"tutorial_mark_3": {
+						"next_task": "tutorial_mark_4",
+						"help": {
+							"title": "Making Your Mark",
+							"file": "tutorial_mark_3",
+							"body": "To mark a field, click and drag the mark around the desired area. Be sure to draw the mark around the entire field. Once you have the mark around the area you want, select the \"Done\" check-box. Once you've clicked on \"Done,\" your mark is saved. You can close your browser window or move on to a new task and all your work will be saved. \n\nIf you'd like to remove one of your marks, click on it and then on the red x button in the upper-right corner of the mark.  \n\n\u003cdiv class=\"video-wrapper\"\u003e\n  \u003cvideo width=\"445\" height=\"138.7\" loop autoplay src=\"/images/mark_task.mp4\"\u003e\u003c/video\u003e\n\u003c/div\u003e\n"
+						}
+					},
+					"tutorial_mark_4": {
+						"next_task": "tutorial_mark_5",
+						"help": {
+							"title": "Existing Marks",
+							"file": "tutorial_mark_4",
+							"body": "You may see existing marks on the page. If this is the case, someone has already marked the field and there's no need to mark an area twice. Sometimes, you might see that others have left bad marks, ex. marks around the wrong field or around an empty part of the page. Ignore any bad marks you see. They will be weeded out in the Transcribe task.  \n\nYou can manipulate the digitized pages with tools on the left side of the screen. Here you'll find the zoom tool and a mark toggle. The mark toggle allows you to hide other people's marks from the page.  \nThe marks created in this task identify the fields to be transcribed in the next task phase.  \n"
+						}
+					},
+					"tutorial_mark_5": {
+						"next_task": null,
+						"help": {
+							"title": "Additional Help  ",
+							"file": "tutorial_mark_5",
+							"body": "If you have any questions, select \"View A Tutorial\" to return to this tutorial at any time or peruse the forum.\n\nHave fun and thanks for your help!  \n"
+						}
+					}
+				}
+			},
+			"transcribe": {
+				"name": "Transcribe Tutorial",
+				"first_task": "learn_transcribing",
+				"tasks": {
+					"learn_transcribing": {
+						"next_task": null,
+						"help": {
+							"title": "Transcribe",
+							"file": "tutorial_transcribe_1",
+							"body": "Transcribe the text exactly as you see it. For additional help and sample transcriptions, each transcription prompt has an \"Need some help\" button providing field specific context.\n\nIf the text is hard to read, give it your best shot and keep going. Keep in mind: each mark will be transcribed by multiple volunteers and quality controlled in the Verify task.\n\nIf the field is indecipherable, mark it as Illegible and move on to the next entry. If there is no information to transcribe, select Bad region and move on to the next entry.\n"
+						}
+					}
+				}
+			},
+			"verify": {
+				"name": "Verify Tutorial",
+				"first_task": "learn_verifying",
+				"tasks": {
+					"learn_verifying": {
+						"next_task": null,
+						"help": {
+							"title": "Verify",
+							"file": "tutorial_verify_1",
+							"body": "In this task, you'll perform quality control on the transcriptions. Select the best transcription from those provided. If none appear correct, you may choose to enter your own.\n\nOnce a consensus has been achieved, we'll accept the transcription as accurate and add the value to the index.\n"
+						}
+					}
+				}
+			}
+		}
+	}
+}
